@@ -1,0 +1,47 @@
+
+// 样式重置
+
+html, body, div, span, 
+h1, h2, h3, h4, h5, h6, p,
+a,  address, 
+em, img, q, s, 
+strong, sub, sup, 
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, 
+figure, figcaption, footer, header, 
+main, menu, nav, section, 
+audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section {
+	display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+body {
+	line-height: 1;
+	color: rgb(51, 51, 51);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote:before, blockquote:after{
+	content: '';
+	display: inline-block;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

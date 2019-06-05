@@ -1,0 +1,441 @@
+.header{
+    width: 100%;
+    background-color: black;
+    
+    // 头部上半部分
+    &-wrap{
+        width: 1111px;
+        margin: 0 auto;
+        height: 32px;
+        padding: 24px 0;
+        &-logo{
+            float: left;
+            width: 163px;
+            height: 32px;
+            background: url(/imgs/header-logo.png) no-repeat center;
+        }
+        &-option{
+            float: right;
+            &>div{
+                float: right;
+                position: relative;
+                font-size: 12px;
+                margin-left: 32px;
+                margin-right: 15px;
+                padding-right: 50px;
+                line-height: 32px;
+                &>a{
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+                span{
+                    position: absolute;
+                    right: 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 30px;
+                    height: 32px;
+                    background-image: url(/imgs/sprites_header_footer.png);
+                    background-repeat: no-repeat;
+                }
+            }
+            .header-icon{
+                height: 32px;
+                padding-right: 32px;
+            }
+            &-help{
+                float: right;
+                span{
+                    background-position: -169px -161px;
+                    &:hover{
+                        background-position: -167px -1px;
+                    }
+                }
+            }
+            &-search{
+                span{
+                    background-position: -137px -161px;
+                    &:hover{
+                        background-position: -135px -1px;
+                    }
+                }
+            }
+            &-chat{
+                span{
+                    background-position: -95px -54px;
+                    &:hover{
+                        background-position: -135px -33px;
+                    }
+                }
+            }
+            &-cart{
+                height: 32px;
+                span{
+                    background-position: -168px -97px;
+                    text-align: center;
+                    line-height: 32px;
+                    font-size: 18px;
+                }
+            }
+            &-user{
+                height: 32px;
+                span{
+                    background-position: -96px -85px;
+                    &:hover{
+                        background-position: -136px -65px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 下拉式搜索框
+    &-searchbox{
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        overflow: hidden;
+        display: none;
+        input{
+            display: block;
+            width: 1000px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 40px;
+            font-family: tradegothic, fzlthjw, 微软雅黑, "Microsoft YaHei", 黑体, SimHei;
+            outline: none;
+            border: none;
+            color: rgb(153, 153, 153);
+        }
+
+    }
+
+    //登录注册选项卡
+    &-user{
+        width: 100%;
+        height: 397px;
+        background: #fff;
+        display: none;
+        &-box{
+            width: 1000px;
+            height: 337px;
+            margin: 0 auto;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+        &-login{
+            display: none;
+            &-left{
+                width: 150px;
+                height: 31px;
+                float: left;
+                h3{
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    width: 148px;
+                    height: 38px;
+                    line-height: 38px;
+                    color: #fff;
+                    text-align: center;
+                    border:1px solid black;
+                    background: black;
+                    transition: all 0.3s;
+                        span{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 15px;
+                        height: 28px;
+                        margin-left: 12px;
+                        background-image: url(/imgs/sprites_header_footer.png);
+                        background-repeat: no-repeat;
+                        background-position: -10px -164px;
+                        transition: all 0.3s;
+                    }
+                    &:hover{
+                    background-color: #fff;
+                    color:black;
+                    }
+                    &:hover span{
+                        background-position: -43px -164px;
+                    }
+                }
+            }
+            &-center{
+                float: left;
+                width: 300px;
+                height: 317px;
+                margin: 0 60px;
+                padding: 0 60px;
+                border-left: 1px solid #999;
+                border-right: 1px solid #999;
+                p{
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                span{
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 12px;
+                    background-image: url(/imgs/shareimg.png);
+                    background-repeat: no-repeat;
+                    &:first-child{
+                        background-position: 0 0;
+                    }
+                    &:last-child{
+                        background-position: 0 -240px;
+                    }
+                }
+            }
+            &-right{
+                float: left;
+                position: relative;
+                p{
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                input{
+                    margin-bottom: 20px;
+                    width: 275px;
+                    height: 28px;
+                    border: 1px solid red;
+                    line-height: 30px;
+                    padding: 5px 5px 5px 18px;
+                    outline: none;
+                }
+                .valid{
+                    padding: 0 46px 0 46px;
+                    height: 42px;
+                    width: 206px;
+                    line-height: 42px;
+                    font-size: 14px;
+                    color: #666;
+                    border: 1px #666 solid;
+                    margin-bottom: 20px;
+                }
+                h5{
+                    color: #999;
+                    font-size: 11px;
+                    height: 30px;
+                    line-height: 30px;
+                    margin-bottom: 10px;
+                    a{
+                        color: #999;
+                    }
+                }
+                .login{
+                    width: 298px;
+                    height: 38px;
+                    font-size: 18px;
+                    line-height: 38px;
+                    color: #fff;
+                    text-align: center;
+                    border:1px solid black;
+                    background: black;
+                    margin-bottom: 5px;
+                    transition: all 0.3s;
+                        span{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 15px;
+                        height: 28px;
+                        margin-left: 12px;
+                        background-image: url(/imgs/sprites_header_footer.png);
+                        background-repeat: no-repeat;
+                        background-position: -10px -164px;
+                        transition: all 0.3s;
+                    }
+                    &:hover{
+                    background-color: #fff;
+                    color:black;
+                    }
+                    &:hover span{
+                        background-position: -43px -164px;
+                    }
+                }
+                h4{
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: space-between;
+                    a{
+                        color: #999;
+                    }
+                    input{
+                        width: 20px;
+                        height: 20px;
+                        margin: 0;
+                        margin-right: 20px;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+        &-register{
+            &>div{
+                width: 1000px;
+                height: 95px;
+                display: flex;
+                justify-content: space-between;
+                &>div{
+                    width: 300px;
+                    height: 95px;
+                    &>p{
+                        margin-bottom: 10px;
+                    }
+                    &>input{
+                        border: 1px solid #999;
+                        width: 275px;
+                        height: 28px;
+                        line-height: 30px;
+                        padding: 5px 5px 5px 18px;
+                        margin-bottom:25px; 
+                    }
+                }
+                
+            }
+            &-top{
+                .gender{
+                    input{
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            &-bottom{
+                .register{
+                    cursor: pointer;
+                    h5{
+                        color: #999;
+                        font-size: 11px;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                        a{
+                            color: #999;
+                        }
+                    }
+                    .reg-btn{
+                        width: 298px;
+                        height: 38px;
+                        font-size: 18px;
+                        line-height: 38px;
+                        color: #fff;
+                        text-align: center;
+                        border:1px solid black;
+                        background: black;
+                        margin-bottom: 5px;
+                        transition: all 0.3s;
+                            span{
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 15px;
+                            height: 28px;
+                            margin-left: 12px;
+                            background-image: url(/imgs/sprites_header_footer.png);
+                            background-repeat: no-repeat;
+                            background-position: -10px -164px;
+                            transition: all 0.3s;
+                        }
+                        &:hover{
+                        background-color: #fff;
+                        color:black;
+                        }
+                        &:hover span{
+                            background-position: -43px -164px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+
+
+    // 导航
+    &-nav{
+        height: 50px;
+        background: #464646;
+        position: relative;
+        &-ul{
+            width: 675px;
+            height: 50px;
+            margin: 0 auto;
+            &>li{
+                width: 111px;
+                padding: 0 12px;
+                height: 50px;
+                line-height: 35px;
+                list-style: none;
+                float: left;
+                font-size: 18px;
+                text-align: center;
+                &:hover>div{
+                    display: block;
+                }
+                &>div{
+                    position: absolute;
+                    z-index: 5;
+                    left: 0;
+                    top: 50px;
+                    width: 100%;
+                    height: 130px;
+                    display: none;
+                    background-color: #fff;
+                    &>ul{
+                        width: 1000px;
+                        height: 130px;
+                        margin: 0 auto;
+                        &>li{
+                            float: left;
+                            list-style: none;
+                            width: 130px;
+                            height: 130px;
+                            &>a{
+                                color: #333;
+                                position: relative;
+                                text-decoration: none;
+                                img{
+                                    width: 130px;
+                                    height: 130px;
+                                }
+                                p{
+                                    position: absolute;
+                                    bottom: 15px;
+                                    width: 100%;
+                                    text-align: center;
+                                    line-height: 15px;
+                                    left: 0;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                >a{
+                    color: white;
+                    text-decoration: none;
+                    position: relative;
+                    >i{
+                        width: 0;
+                        height: 0;
+                        border: #464646 6px solid;
+                        border-top-color: #ffffff;
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -3px;
+                        bottom: -15px;
+                    }
+                }
+            }
+        }
+    }
+}
