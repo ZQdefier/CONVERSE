@@ -54,44 +54,17 @@
                         <a href="javascript:;" class="type-sale">最畅销</a>
                     </div>
                 </div>
-                <div class="content-list-show">
-                    <dl>
-                        <dt><a href="javascript:;"><img src="//image.converse.com.cn/resources/product/164949C603/164949C603_1M_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="javascript:;">【男的】 Cons All Star Pro BB</a></dd>
-                        <dd>￥999.00</dd>
-                        <div></div>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;"><img src="//image.converse.com.cn/resources/product/164949C603/164949C603_1M_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="javascript:;">【男的】 Cons All Star Pro BB</a></dd>
-                        <dd>￥999.00</dd>
-                        <div></div>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;"><img src="//image.converse.com.cn/resources/product/164949C603/164949C603_1M_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="javascript:;">【男的】 Cons All Star Pro BB</a></dd>
-                        <dd>￥999.00</dd>
-                        <div></div>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;"><img src="//image.converse.com.cn/resources/product/164949C603/164949C603_1M_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="javascript:;">【男的】 Cons All Star Pro BB</a></dd>
-                        <dd>￥999.00</dd>
-                        <div></div>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;"><img src="//image.converse.com.cn/resources/product/164949C603/164949C603_1M_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="javascript:;">【男的】 Cons All Star Pro BB</a></dd>
-                        <dd>￥999.00</dd>
-                        <div></div>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;"><img src="//image.converse.com.cn/resources/product/164949C603/164949C603_1M_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="javascript:;">【男的】 Cons All Star Pro BB</a></dd>
-                        <dd>￥999.00</dd>
-                        <div></div>
-                    </dl>
-                  
+                <div class="content-list-show" id="list-container">
+                    <script type="text/html" id="list-template">
+                        {{each list item}}
+                            <dl data-id="{{item.id}}">
+                                <dt><a href="/html/detail.html?shopId={{item.id}}"><img src="{{item.img}}" alt=""></a></dt>
+                                <dd><a href="/html/detail.html?shopId={{item.id}}">{{item.title}}</a></dd>
+                                <dd>￥{{item.price}}</dd>
+                                <div></div>
+                            </dl>    
+                        {{/each}}
+                    </script>             
                 </div>
             </div>
         </div>

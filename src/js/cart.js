@@ -1,5 +1,5 @@
 require(['config'],() => {
-    require(['header','footer'], header => {
+    require(['header','template','footer'], (header,template) => {
         class Cart{
             constructor() {
 

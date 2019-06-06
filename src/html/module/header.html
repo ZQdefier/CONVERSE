@@ -15,27 +15,27 @@
             <a href="javascript:;" title="帮助"><span></span></a>
         </div>
         <div class="header-wrap-option-search header-icon">
-            <a href="javascript:;" title="搜索"><span id="header-search"></span></a>
+            <a href="javascript:;" title="搜索"><span id="headerSearch"></span></a>
         </div>
         <div class="header-wrap-option-chat header-icon">
             <a href="javascript:;" title="聊天"><span></span></a>
         </div>
-        <div class="header-wrap-option-cart"><a href="javascript:;" title="购物车">购物车<span>0</span></a></div>
-        <div class="header-wrap-option-user"><a href="javascript:;" title="登录 / 注册" id="header-user">登录 / 注册<span></span></a></div>
+        <div class="header-wrap-option-cart"><a href="/html/cart.html" title="购物车">购物车<span>0</span></a></div>
+        <div class="header-wrap-option-user"><a href="javascript:;" title="登录/注册"><i id="userLogin">登录</i> / <i id="userReg">注册</i><span  id="header-user"></span></a></div>
     </div>
 </div>
 
 
 <!-- 下拉式搜索框 -->
-<div class="header-searchbox">
+<div class="header-searchbox" id="searchBox">
     <input type="text" placeholder="想找什么随便搜">
     <span></span>
     <span></span>
 </div>
 
 <!-- 登录注册选项卡 -->
-<div class="header-user">
-    <div class="header-user-login header-user-box">
+<div class="header-user" id="headerUser">
+    <div class="header-user-login header-user-box" id="loginBox">
         <div class="header-user-login-left">
             <h3>还未注册？</h3>
             <p id="registerBtn">注册账户<span></span></p>
@@ -55,7 +55,7 @@
             <h4><a class="remember"><input type="checkbox" id="remember">记住登录名</a><a href="">忘记密码？</a></h4>
         </div>
     </div>
-    <div class="header-user-register header-user-box">
+    <div class="header-user-register header-user-box" id="regBox">
         <div class="header-user-register-top">
             <div class="tel">
                 <p>手机号码<span>*</span></p>

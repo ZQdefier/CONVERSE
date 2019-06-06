@@ -7,6 +7,7 @@
     <link rel="icon" href="//image.converse.com.cn/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="//image.converse.com.cn/images/favicon.ico" type="image/x-icon">
     <title>匡威(CONVERSE)中国官方商城 - 匡威官方网站,正品匡威全系列,新品首发独家平台</title>
+    <link rel="stylesheet" href="/libs/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
@@ -18,46 +19,48 @@
             <a href="javascript:;">尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服。</a>
         </div>
         <!-- 轮播图 -->
-        <div class="banner">
-
-        </div>
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper banner-img">
+                <div class="swiper-slide"><a href="javascript:;"><img src="/imgs/banner1.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:;"><img src="/imgs/banner2.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:;"><img src="/imgs/banner3.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:;"><img src="/imgs/banner4.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:;"><img src="/imgs/banner5.jpg" alt=""></a></div>
+            </div>
+            <div class="swiper-pagination"></div><!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+            <div class="swiper-button-prev swiper-button-white swiperbtn"></div><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+            <div class="swiper-button-next swiper-button-white swiperbtn"></div><!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+        </div>   
         <!-- 热卖商品 -->
         <div class="hotshop">
-            <div class="title">
+            <div class="hotshop-title">
                 <h1>热卖商品</h1>
             </div>
             <!-- 热卖商品分类 -->
-            <ul class="hotshop-sort">
-                <li><a href="javascript:;">男的踩的</a><a href="javascript:;"><img src="//image.converse.com.cn/static/home/homepage/top_02_1203.jpg?201905051014" alt=""></a></li>
-                <li><a href="javascript:;">女的踩的</a><a href="javascript:;"><img src="//image.converse.com.cn/static/home/homepage/top_02_1203.jpg?201905051014" alt=""></a></li>
-                <li><a href="javascript:;">穿的</a><a href="javascript:;"><img src="//image.converse.com.cn/static/home/homepage/top_02_1203.jpg?201905051014" alt=""></a></li>
-                <li><a href="javascript:;">戴的</a><a href="javascript:;"><img src="//image.converse.com.cn/static/home/homepage/top_02_1203.jpg?201905051014" alt=""></a></li>
+            <ul class="hotshop-sort" id="hotShop">
+                <li><a href="/html/list.html">男的踩的</a><a href="/html/list.html"><img src="//image.converse.com.cn/static/home/homepage/top_02_1203.jpg?201906041122" alt=""></a></li>
+                <li><a href="/html/list.html">女的踩的</a><a href="/html/list.html"><img src="//image.converse.com.cn/static/home/homepage/top_01_1203.jpg?201906041122" alt=""></a></li>
+                <li><a href="/html/list.html">穿的</a><a href="/html/list.html"><img src="//image.converse.com.cn/static/home/homepage/top_01_05.jpg?201906041122" alt=""></a></li>
+                <li><a href="/html/list.html">戴的</a><a href="/html/list.html"><img src="//image.converse.com.cn/static/home/homepage/top_01_07.jpg?201906041122" alt=""></a></li>
             </ul>
             <div class="hotshop-br">
-                <div class="hotshop-br-sj"></div>
+                <div class="hotshop-br-sj" id="hotSj"></div>
             </div>
             <!-- 热卖商品展示 -->
-            <div class="hotshop-show">
-                <dl>
-                    <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                    <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                    <dd>￥599.00</dd>
-                </dl>
-                <dl>
-                    <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                    <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                    <dd>￥599.00</dd>
-                </dl>
-                <dl>
-                    <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                    <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                    <dd>￥599.00</dd>
-                </dl>
-                <dl>
-                    <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                    <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                    <dd>￥599.00</dd>
-                </dl>
+            <div class="hotshow-relative" id="show-container">
+                <script type="text/html" id="show-template">
+                    {{each list sort}}
+                        <div class="hotshop-show">
+                            {{each sort.type item}}                           
+                            <dl data-id="{{item.id}}">
+                                <dt><a href="/html/detail.html?shopId={{item.id}}"><img src="{{item.img}}" alt=""></a></dt>
+                                <dd><a href="/html/detail.html?shopId={{item.id}}">{{item.title}}</a></dd>
+                                <dd>￥{{item.price}}</dd>
+                            </dl>    
+                            {{/each}}                      
+                        </div>
+                    {{/each}}
+                </script>
             </div>
         </div>
         <!-- 新品推荐 -->
@@ -66,28 +69,17 @@
                 <h1>新品推荐</h1>
             </div>
             <!-- 新品展示 -->
-            <div class="newshop-show">
-                    <dl>
-                        <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                        <dd>￥599.00</dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                        <dd>￥599.00</dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                        <dd>￥599.00</dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img src="//image.converse.com.cn/resources/product/164085C102/164085C102_1B_NEW.png?201905051014" alt=""></a></dt>
-                        <dd><a href="">【男女同款】Chuck 70 Pop Toe高帮</a></dd>
-                        <dd>￥599.00</dd>
-                    </dl>
-                </div>
+            <div class="newshop-show" id="new-container">
+                <script type="text/html" id="new-template">
+                    {{each list item}}
+                        <dl data-id="{{item.id}}">
+                            <dt><a href="/html/detail.html?shopId={{item.id}}"><img src="{{item.img}}" alt=""></a></dt>
+                            <dd><a href="/html/detail.html?shopId={{item.id}}">{{item.title}}</a></dd>
+                            <dd>￥{{item.price}}</dd>
+                        </dl>  
+                    {{/each}}
+                </script>
+            </div>
         </div>
         <!-- 街头先型 -->
         <div class="street">
@@ -98,7 +90,10 @@
             <!-- 街头先型内容 -->
             <div class="street-content">
                 <dl class="street-content-left">
-                    <dt><a href=""><img src="//image.converse.com.cn/static/touts/PC2-CT70-JUNE.jpg" alt=""></a></dt>
+                    <dt>
+                        <a href=""><img src="//image.converse.com.cn/static/touts/PC2-CT70-JUNE.jpg" alt=""></a>
+                        <div class="modal"></div>
+                    </dt>
                     <dd>
                         <a href="javascript:;"><h2>特殊细节 给你不同</h2>
                         <p>Chuck Taylor All Star’70延续70鞋款的经典鞋型设计，偏窄鞋头与修长鞋型上脚优雅显瘦。同时鞋面采用皮革材质，提升了品质感。沿用至今的复古大鞋舌，不对称鞋头挡泥板与光亮的鞋围条细节，加厚海绵鞋垫提升了舒适度。</p></a>
@@ -106,7 +101,10 @@
                     <dd>查看更多<span></span></dd>
                 </dl>
                 <dl class="street-content-left">
-                    <dt><a href=""><img src="//image.converse.com.cn/static/touts/PC2-CT70-JUNE.jpg" alt=""></a></dt>
+                    <dt>
+                        <a href=""><img src="//image.converse.com.cn/static/touts/PC2-CT70-JUNE.jpg" alt=""></a>
+                        <div class="modal"></div>
+                    </dt>
                     <dd>
                         <a href="javascript:;"><h2>特殊细节 给你不同</h2>
                         <p>Chuck Taylor All Star’70延续70鞋款的经典鞋型设计，偏窄鞋头与修长鞋型上脚优雅显瘦。同时鞋面采用皮革材质，提升了品质感。沿用至今的复古大鞋舌，不对称鞋头挡泥板与光亮的鞋围条细节，加厚海绵鞋垫提升了舒适度。</p></a>

@@ -18,28 +18,56 @@
                 <p><i></i><a href="javascript:;">加入收藏夹</a></p>
                 <p><span></span></p>
             </div>             
-            <div class="detail-content">
-                <div class="detail-content-title">
-                    <h1>【男女同款】Chuck 70 Pop Toe低帮  中性</h1>
-                    <p>￥569</p>
-                </div>
-                <div class="detail-content-img">
-                    
-                </div>
-                <div class="detail-content-info">
-                    <ul>
-                        <li>经典CHUCK70低帮鞋型</li>
-                        <li>舒适的帆布鞋面与Ortholite®（欧索莱）鞋垫</li>
-                        <li>橡胶质地的鞋头及后跟标</li>
-                        <li>橡胶色鞋围条活泼有型</li>
-                        <li>清新的配色演绎多元化穿搭风格</li>
-                    </ul>
-                    <p>Converse与热爱街头潮流的人们一起挑战出型夏季，革新展现Chuck70复古新风貌。</p>
-                    <h4>价格说明（此说明仅当出现价格比较时有效）</h4>
-                    <h5>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考。</h5>
-                    <p>未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因为会员使用优惠券发生变化，最终以订单结算页价格为准。</p>
-                    <a href="javascript:;">CHUCK 70</a>
-                </div>
+            <div class="detail-content" id="detail-container">
+                <script type="text/html" id="detail-template">
+                    <div class="detail-content-title">
+                        <h1>{{list.title}}</h1>
+                        <p>￥{{list.price}}</p>
+                    </div>
+                    <div class="detail-content-img">
+                        <div class="view_bd middle-pic">
+                                <img class="zoom-img" src="{{list.img[0]}}" data-zoom-image="{{list.img[0]}}"/>
+                        </div>
+                        <div class="view_thumbs" id="gal1">
+                            <ul class="view-ul small-pic">
+                                <li class="current">
+                                    <a href="#" data-image="{{list.img[0]}}" data-zoom-image="{{list.img[0]}}">
+                                    <img class="s" src="{{list.img[0]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[1]}}" data-zoom-image="{{list.img[1]}}">
+                                    <img class="s" src="{{list.img[1]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[2]}}" data-zoom-image="{{list.img[2]}}">
+                                    <img class="s" src="{{list.img[2]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[3]}}" data-zoom-image="{{list.img[3]}}">
+                                    <img class="s" src="{{list.img[3]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[4]}}" data-zoom-image="{{list.img[4]}}">
+                                    <img class="s" src="{{list.img[4]}}" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail-content-info">
+                        <ul>
+                            <li>经典CHUCK70低帮鞋型</li>
+                            <li>舒适的帆布鞋面与Ortholite®（欧索莱）鞋垫</li>
+                            <li>橡胶质地的鞋头及后跟标</li>
+                            <li>橡胶色鞋围条活泼有型</li>
+                            <li>清新的配色演绎多元化穿搭风格</li>
+                        </ul>
+                        <p>Converse与热爱街头潮流的人们一起挑战出型夏季，革新展现Chuck70复古新风貌。</p>
+                        <h4>价格说明（此说明仅当出现价格比较时有效）</h4>
+                        <h5>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考。</h5>
+                        <p>未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因为会员使用优惠券发生变化，最终以订单结算页价格为准。</p>
+                        <a href="javascript:;">CHUCK 70</a>
+                    </div>
+                </script>
             </div>
             <div class="detail-type">
                 <div class="detail-type-list">

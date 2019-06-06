@@ -1,6 +1,11 @@
 .header{
     width: 100%;
     background-color: black;
+    position: relative;
+    z-index: 20;
+    a:hover{
+        text-decoration: underline;
+    }
     
     // 头部上半部分
     &-wrap{
@@ -118,15 +123,18 @@
         height: 397px;
         background: #fff;
         display: none;
+        position: relative;
         &-box{
             width: 1000px;
             height: 337px;
-            margin: 0 auto;
+            margin-left: -500px;
+            position: absolute;
+            left: 50%;
+            top: 0;
             padding-top: 40px;
             padding-bottom: 20px;
         }
         &-login{
-            display: none;
             &-left{
                 width: 150px;
                 height: 31px;
@@ -278,6 +286,7 @@
             }
         }
         &-register{
+            display: none;
             &>div{
                 width: 1000px;
                 height: 95px;
@@ -403,6 +412,10 @@
                                 color: #333;
                                 position: relative;
                                 text-decoration: none;
+                                &:hover p{
+                                    color: #999;
+                                    text-decoration: underline;
+                                }
                                 img{
                                     width: 130px;
                                     height: 130px;
@@ -415,6 +428,7 @@
                                     line-height: 15px;
                                     left: 0;
                                     font-size: 14px;
+                                    transition: all .3s;
                                 }
                             }
                         }

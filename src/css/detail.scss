@@ -73,14 +73,38 @@
             font-weight: bold;  
         }
         &-img{
-            height: 600px;
-            background: #ccc;
+            height: 530px;
             margin-bottom: 40px;
+            padding-top: 60px;
+            .middle-pic{
+                width: 450px;
+                height: 450px;
+                margin: 0 auto;
+                margin-bottom: 22px;
+                img{
+                    width: 450px;
+                    height: 450px;
+                }
+            }
+            .small-pic{
+                width: 450px;
+                margin: 0 auto;
+                overflow: hidden;
+                li{
+                    float: left;
+                    margin-right: 10px;
+                }
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
         }
         &-info{
             height: 398px;
             line-height: 20px;
             font-size: 12px;
+            margin-left: 35px;
             margin-bottom: 75px;
             ul{
                 margin-bottom: 30px;

@@ -19,8 +19,46 @@
 .banner{
     width: 100%;
     height: 529px;
-    background: green;
     margin-bottom: 80px;
+    &-img{
+        height: 493px;
+        img{
+            width: 100%;
+        }
+    }
+    .swiper-button-prev{
+        left: 0;
+    }
+    .swiper-button-next{
+        right: 0;
+    }
+    .swiperbtn{
+        width: 40px;
+        height: 100px;
+        background-color: #000;
+        outline: none;
+    }
+    .swiper-pagination{
+        bottom: 0;
+    }
+    .swiper-pagination-bullet{
+        width: auto;
+        height: auto;
+        display: inline-block;
+        border-top: 1px solid #fff;
+        color: #999;
+        font-size: 13px;
+        height: 15px;
+        padding: 5px 0;
+        margin-left: 8px;
+        background: none;
+        border-radius: 0;
+        font-weight: bold;
+        &-active{
+            color: #000;
+            border-top: 1px solid #000;
+        }
+    }
 }
 .hotshop,.newshop,.street{
     width: 1000px;
@@ -30,8 +68,9 @@
 // 热销 新品
 .hotshop,.newshop{
     overflow: hidden;
+    position: relative;
     &-title{
-        margin: 20px 0;
+        margin-bottom: 20px;
         height: 30px;
         font-size: 30px;
         line-height: 30px;
@@ -104,15 +143,30 @@
             top: 0;
             left: 12%;
             margin-left: -20px;
+            transition: left .5s;
         }
     }
+    .hotshow-relative{
+        position: relative;
+        width: 1000px;
+        min-height: 300px;
+        padding-top: 20px;
+        padding-bottom: 19px;
+    }
     &-show{
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 1000px;
         height: 300px;
         padding-top: 20px;
         padding-bottom: 19px;
+        background: #fff;
         display: flex;
         justify-content: space-between;
+        &:first-child{
+            z-index: 5;
+        }
         dl{
             width: 248px;
             height: 298px;
@@ -143,9 +197,12 @@
 }
 .newshop{
     margin-bottom: 80px;
+    &-show{
+        position: relative;
+    }
 }
 
-// 街头先锋
+// 街头先型
 .street{
     width: 1000px;
     margin: 0 auto;
@@ -178,6 +235,21 @@
             height: 552px;
             &>dt{
                 margin-bottom: 17px;
+                position: relative;
+                &:hover .modal{
+                    display: block;
+                }
+                .modal{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 5;
+                    display: none;
+                    background:rgba($color: #000000, $alpha: 0.3);
+                    cursor: pointer;
+                }
             }
             &>dd:first-of-type{
                 margin-bottom: 16px;
