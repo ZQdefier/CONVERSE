@@ -241,6 +241,7 @@
             .size{
                 padding-top: 20px;
                 font-size: 12px;
+                line-height: 28px;
             }
             .choose{
                 position: relative;
@@ -249,27 +250,30 @@
                 border: 1px solid #b7b7b7;
             }
             i{
-                width: 38px;
+                width: 31px;
                 height: 28px;
                 display: block;
                 background: url(/imgs/detail.png) no-repeat scroll 11px -132px transparent;
                 position: absolute;
                 right: 0;
                 top: 0;
+                z-index: 3;
                 border-left: 1px solid #b7b7b7;
             }
             select{
                 width: 98px;
                 height: 28px;
                 position: absolute;
+                -webkit-appearance: none;
+                border: none;
                 top: 0;
                 left: 0;
-                z-index: 1;
-                opacity: 0;
                 cursor: pointer;
                 font-family: "tradegothic";
+                text-align: center;
+                font-size: 12px;
                 option{
-                    text-align: left;
+                    text-align: center;
                     font-weight: normal;
                     display: block;
                     white-space: pre;
