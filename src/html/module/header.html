@@ -21,7 +21,7 @@
             <a href="javascript:;" title="聊天"><span></span></a>
         </div>
         <div class="header-wrap-option-cart"><a href="/html/cart.html" title="购物车">购物车<span id="cartNum">0</span></a></div>
-        <div class="header-wrap-option-user"><a href="javascript:;" title="登录/注册"><i id="userLogin">登录</i> / <i id="userReg">注册</i><span  id="header-user"></span></a></div>
+        <div class="header-wrap-option-user"><a href="javascript:;" title="登录/注册"><em id="unlogin"><i id="userLogin">登录</i> / <i id="userReg">注册</i></em><em id="onlogin">欢迎您！&nbsp;<i id="loginName"></i> / <i id="loginOut">退出</i></em><span  id="header-user"></span></a></div>
     </div>
 </div>
 
@@ -47,7 +47,7 @@
         </div>
         <div class="header-user-login-right">
             <p>已经成为会员？</p>
-            <input type="text" placeholder="邮箱/手机" id="user"><br>
+            <input type="text" placeholder="邮箱/用户名" id="user"><br>
             <input type="text" placeholder="账户密码" id="psd">
             <div class="valid">点击按钮进行验证</div>
             <h5>一旦登录，即表明你同意匡威的<a href="">法律声明</a>和<a href="">使用规则</a></h5>
@@ -58,8 +58,8 @@
     <div class="header-user-register header-user-box" id="regBox">
         <div class="header-user-register-top">
             <div class="tel">
-                <p>手机号码<span>*</span></p>
-                <input type="text">
+                <p>用户名<span>*</span></p>
+                <input type="text" id="regName">
             </div>
             <div class="email">
                 <p>邮箱<span>*</span></p>
@@ -74,7 +74,7 @@
         <div class="header-user-register-middle">
             <div class="password">
                 <p>输入密码</p>
-                <input type="password" id="">
+                <input type="password" id="regPsd">
             </div>
             <div class="valpsd">
                 <p>确认密码</p>
@@ -148,3 +148,9 @@
         <li><a href="javascript:;">店铺分布<i></i></a></li> 
     </ul>
 </div>
+
+<!-- 模态框 -->
+<div class="header-modal"></div>
+
+<!-- 聊聊吧 -->
+<div class="header-chat"><a href="javascript:;"><img src="/imgs/livechat.png" alt=""></a></div>

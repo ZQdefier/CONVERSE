@@ -5,6 +5,9 @@
 .header-nav{
     display: none;
 }
+.clearfix{
+    height: 80px;
+}
 .main{
     width: 1000px;
     min-height: 600px;
@@ -189,7 +192,9 @@
                             }
                             p{
                                 width: 90px;
+                                height: 25px;
                                 position: relative;
+                                border: 1px solid #bcbcbc;
                                 span{
                                     font-size: 14px;
                                     position: absolute;
@@ -200,8 +205,13 @@
                                     display: inline-block;
                                     width: 25px;
                                     height: 25px;
-                                    background: #b63330;
                                     cursor: pointer;
+                                    &:first-of-type{
+                                        background: url(/imgs/minus_dark.png) no-repeat center;
+                                    }
+                                    &:last-of-type{
+                                        background: url(/imgs/add_dark.png) no-repeat center;
+                                    }
                                 }
                                 input{
                                     vertical-align: top;

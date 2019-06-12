@@ -1,12 +1,32 @@
 .header{
     width: 100%;
     background-color: black;
-    position: relative;
+    position: fixed;
+    top: 0;
     z-index: 20;
     a:hover{
         text-decoration: underline;
     }
-    
+
+    // 模态框
+    &-modal{
+        position: fixed;
+        width: 100%;
+        height:100%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        display:none;
+    }
+
+    // 聊吧
+    &-chat{
+        width: 88px;
+        height: 88px;
+        background: #000000;
+        position: absolute;
+        top: 200px;
+        right: 0;
+    }
+
     // 头部上半部分
     &-wrap{
         width: 1111px;
@@ -88,6 +108,17 @@
                     background-position: -96px -85px;
                     &:hover{
                         background-position: -136px -65px;
+                    }
+                }
+                a{
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    i:hover{
+                        text-decoration: underline;
+                    }
+                    #onlogin{
+                        display: none;
                     }
                 }
             }

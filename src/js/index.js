@@ -59,7 +59,7 @@ require(['config'],() => {
                     index = $(this).index();
                     var _left = 12 + index*25 + "%";
                     $("#hotSj").css('left',_left);
-                    $(".hotshop-show").fadeOut().eq(index).fadeIn(); 
+                    $(".hotshop-show").fadeOut(200).eq(index).fadeIn(1000); 
 
                     
                 })

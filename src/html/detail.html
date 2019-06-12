@@ -11,107 +11,108 @@
 </head>
 <body>
     <header class="header"></header>
+    <div class="clearfix"></div>
     <main class="main">
         <div class="detail"  id="detail-container">
-            <div class="detail-share">
-                <p><i></i><a href="javascript:;">分享</a></p>
-                <p><i></i><a href="javascript:;">加入收藏夹</a></p>
-                <p><span></span></p>
-            </div>             
             <script type="text/html" id="detail-template">
-            <div class="detail-content">
-                <div class="detail-content-title">
-                    <h1>{{list.title}}</h1>
-                    <p>￥{{list.price}}</p>
-                </div>
-                <div class="detail-content-img">
-                    <div class="view_bd middle-pic">
-                            <img class="zoom-img" src="{{list.img[0]}}" data-zoom-image="{{list.img[0]}}"/>
+                <div class="detail-share">
+                    <p><i></i><a href="javascript:;">分享</a></p>
+                    <p><i></i><a href="javascript:;">加入收藏夹</a></p>
+                    <p><span></span></p>
+                </div>             
+                <div class="detail-content">
+                    <div class="detail-content-title">
+                        <h1>{{list.title}}</h1>
+                        <p>￥{{list.price}}</p>
                     </div>
-                    <div class="view_thumbs" id="gal1">
-                        <ul class="view-ul small-pic">
-                            <li class="current">
-                                <a href="#" data-image="{{list.img[0]}}" data-zoom-image="{{list.img[0]}}">
-                                <img class="s" src="{{list.img[0]}}" /></a>
-                            </li>
-                            <li>
-                                <a href="#" data-image="{{list.img[1]}}" data-zoom-image="{{list.img[1]}}">
-                                <img class="s" src="{{list.img[1]}}" /></a>
-                            </li>
-                            <li>
-                                <a href="#" data-image="{{list.img[2]}}" data-zoom-image="{{list.img[2]}}">
-                                <img class="s" src="{{list.img[2]}}" /></a>
-                            </li>
-                            <li>
-                                <a href="#" data-image="{{list.img[3]}}" data-zoom-image="{{list.img[3]}}">
-                                <img class="s" src="{{list.img[3]}}" /></a>
-                            </li>
-                            <li>
-                                <a href="#" data-image="{{list.img[4]}}" data-zoom-image="{{list.img[4]}}">
-                                <img class="s" src="{{list.img[4]}}" /></a>
-                            </li>
+                    <div class="detail-content-img">
+                        <div class="view_bd middle-pic">
+                                <img class="zoom-img" src="{{list.img[0]}}" data-zoom-image="{{list.img[0]}}"/>
+                        </div>
+                        <div class="view_thumbs" id="gal1">
+                            <ul class="view-ul small-pic">
+                                <li class="current">
+                                    <a href="#" data-image="{{list.img[0]}}" data-zoom-image="{{list.img[0]}}">
+                                    <img class="s" src="{{list.img[0]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[1]}}" data-zoom-image="{{list.img[1]}}">
+                                    <img class="s" src="{{list.img[1]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[2]}}" data-zoom-image="{{list.img[2]}}">
+                                    <img class="s" src="{{list.img[2]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[3]}}" data-zoom-image="{{list.img[3]}}">
+                                    <img class="s" src="{{list.img[3]}}" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-image="{{list.img[4]}}" data-zoom-image="{{list.img[4]}}">
+                                    <img class="s" src="{{list.img[4]}}" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail-content-info">
+                        <ul>
+                            <li>经典CHUCK70低帮鞋型</li>
+                            <li>舒适的帆布鞋面与Ortholite®（欧索莱）鞋垫</li>
+                            <li>橡胶质地的鞋头及后跟标</li>
+                            <li>橡胶色鞋围条活泼有型</li>
+                            <li>清新的配色演绎多元化穿搭风格</li>
                         </ul>
+                        <p>Converse与热爱街头潮流的人们一起挑战出型夏季，革新展现Chuck70复古新风貌。</p>
+                        <h4>价格说明（此说明仅当出现价格比较时有效）</h4>
+                        <h5>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考。</h5>
+                        <p>未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因为会员使用优惠券发生变化，最终以订单结算页价格为准。</p>
+                        <a href="javascript:;">CHUCK 70</a>
                     </div>
                 </div>
-                <div class="detail-content-info">
-                    <ul>
-                        <li>经典CHUCK70低帮鞋型</li>
-                        <li>舒适的帆布鞋面与Ortholite®（欧索莱）鞋垫</li>
-                        <li>橡胶质地的鞋头及后跟标</li>
-                        <li>橡胶色鞋围条活泼有型</li>
-                        <li>清新的配色演绎多元化穿搭风格</li>
-                    </ul>
-                    <p>Converse与热爱街头潮流的人们一起挑战出型夏季，革新展现Chuck70复古新风貌。</p>
-                    <h4>价格说明（此说明仅当出现价格比较时有效）</h4>
-                    <h5>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考。</h5>
-                    <p>未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因为会员使用优惠券发生变化，最终以订单结算页价格为准。</p>
-                    <a href="javascript:;">CHUCK 70</a>
-                </div>
-            </div>
-            <div class="detail-type">
-                <div class="detail-type-list">
-                    <a href="javacript:;" class="active"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
-                    <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
-                    <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
-                    <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
-                    <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
-                </div>
-                <div class="detail-type-info">
-                    <p>色：<span>{{list.color}}</span></p>
-                    <p>型号：<span>{{list.type}}</span></p>
-                    <h4><i></i><span>尺码对照表</span></h4>
-                </div>
-                <div class="detail-type-addcart">
-                    <h3>尺码换算器</h3>
-                    <h6>本鞋款尺码通常偏大，建议可选小半码，或对照尺码表。</h6>
-                    <div class="size">
-                        <div>请输入你的尺码</div>
-                        <div class="choose">
-                            <i></i>
-                            <select id = "size">
-                                <option value>请选择尺码</option>
-                                <option value>36</option>
-                                <option value>37</option>
-                            </select>
+                <div class="detail-type">
+                    <div class="detail-type-list">
+                        <a href="javacript:;" class="active"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
+                        <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
+                        <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
+                        <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
+                        <a href="javacript:;"><img src="//image.converse.com.cn/resources/product/102307401/102307401_1S_NEW.png?201906041122" alt=""></a>
+                    </div>
+                    <div class="detail-type-info">
+                        <p>色：<span>{{list.color}}</span></p>
+                        <p>型号：<span>{{list.type}}</span></p>
+                        <h4><i></i><span>尺码对照表</span></h4>
+                    </div>
+                    <div class="detail-type-addcart">
+                        <h3>尺码换算器</h3>
+                        <h6>本鞋款尺码通常偏大，建议可选小半码，或对照尺码表。</h6>
+                        <div class="size">
+                            <div>请输入你的尺码</div>
+                            <div class="choose">
+                                <i></i>
+                                <select id = "size">
+                                    <option value>请选择尺码</option>
+                                    <option value>36</option>
+                                    <option value>37</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="num">
-                        <div>数量</div>
-                        <div class="choose">
-                            <i></i>
-                            <select id = "num">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                            </select>
+                        <div class="num">
+                            <div>数量</div>
+                            <div class="choose">
+                                <i></i>
+                                <select id = "num">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
                         </div>
+                        <a href="javascript:;">立即购买</a>
+                        <a href="javascript:;" id="addCart">加入购物车</a>
                     </div>
-                    <a href="javascript:;">立即购买</a>
-                    <a href="javascript:;" id="addCart">加入购物车</a>
                 </div>
-            </div>
-        </script>
-    </div>
+            </script>
+        </div>
         <div class="other">
                 <div class="other-like">
                     <div class="title">
