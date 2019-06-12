@@ -22,26 +22,35 @@
                     <p>筛选</p>
                 </div>
                 <div class="content-filter-content">
-                    <dl>
+                    <dl id="series">
                         <dt>系列</dt>
                         <dd><input type="checkbox" name="xl" id=""> <span>CHUCK 70</span></dd>
                         <dd><input type="checkbox" name="xl" id=""> <span>ONE STAR</span></dd>
                     </dl>
-                    <dl>
+                    <dl id="season">
                         <dt>季节</dt>
-                        <dd></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>春</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>夏</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>秋</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>冬</span></dd>
                     </dl>
-                    <dl>
+                    <dl id="kids">
                         <dt>儿童</dt>
-                        <dd></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>儿童</span></dd>
                     </dl>
-                    <dl>
+                    <dl id="type">
                         <dt>产品分类</dt>
-                        <dd></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>商务</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>休闲</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>嘻哈</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>学院</span></dd>
                     </dl>
-                    <dl>
+                    <dl id="priceDomain">
                         <dt>价格</dt>
-                        <dd></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>99-399</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>399-999</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>999-1999</span></dd>
+                        <dd><input type="checkbox" name="xl" id=""> <span>1999-2999</span></dd>
                     </dl>
                 </div>
             </div>
@@ -49,10 +58,10 @@
                 <div class="content-list-order">
                     <div class="content-list-order-title">排序</div>
                     <div class="content-list-order-type">
-                        <a href="javascript:;" class="active type-default">默认</a>
-                        <a href="javascript:;" class="type-price"><i></i>价格</a>
-                        <a href="javascript:;" class="type-like">最喜欢</a>
-                        <a href="javascript:;" class="type-sale">最畅销</a>
+                        <a href="javascript:;" class="active type-default" id="defaul">默认</a>
+                        <a href="javascript:;" class="type-price" id="price"><i class="litre"></i><i class="drop"></i>价格</a>
+                        <a href="javascript:;" class="type-like" id="mostLike">最喜欢</a>
+                        <a href="javascript:;" class="type-sale" id="mostSale">最畅销</a>
                     </div>
                 </div>
                 <div class="content-list-show" id="list-container">

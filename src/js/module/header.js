@@ -23,33 +23,17 @@ define(['jquery','url','cookie'],($,url) => {
 
         // 监听事件
         bindevents() {
-            $("#header-user").on('click',() => {
-                this.userSlide()
-            })
-            $("#userLogin").on('click',() => {
-                this.userLogin()
-            })
-            $("#userReg").on('click',() => {
-                this.userReg()
-            })
-            $("#headerSearch").on('click',() => {
-                this.userSearch()
-            })
-            $(".header").on('click',"#loginBtn",() => {
-                this.login();
-            })
-            $(".header").on('click',"#regBtn",() => {
-                this.register();
-            })
-            $(".header").on('click',"#loginOut",() => {
-                this.loginOut();
-            })
-            $(".header").on('click',".header-modal",() => {
-                this.modal();
-            })
-            $(window).on('scroll',() => {
-                this.scroll();
-            })
+            $("#header-user").on('click',() => this.userSlide())
+            $("#userLogin").on('click',() => this.userLogin())
+            $("#userReg").on('click',() => this.userReg())
+            $("#headerSearch").on('click',() => this.userSearch())
+            $(".header").on('click',"#loginBtn",() => this.login())
+            $(".header").on('click',"#regBtn",() => this.register())
+            $(".header").on('click',"#loginOut",() => this.loginOut())
+            $(".header").on('click',".header-modal",() => this.modal())
+            $(".header").on('click',"#searchBtn",() => this.search())
+            $(".header").on('click',"#cancel",() => this.cancel())
+            $(window).on('scroll',() => this.scroll())
         }
         
         // 购物车数量变化功能
@@ -163,10 +147,18 @@ define(['jquery','url','cookie'],($,url) => {
 
         //搜索功能
         search() {
-
+            let text = $("#searchContent").val();
+            $.getJSON('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=?&wd='+ text, res => {
+                console.log(res);
+            })
         }
 
 
+        // 取消搜索
+        cancel() {
+            $("#searchContent").val("");
+            this.userSearch();
+        }
         // 模态框消失
         modal() {
             if(this.userBox) this.userSlide();

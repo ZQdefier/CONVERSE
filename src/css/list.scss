@@ -59,6 +59,7 @@
                 height: 25px;
                 padding: 18px 0 5px 0;
                 overflow: hidden;
+                transition: height .5s;
                 dt{
                     font-size: 18px;
                     margin-bottom: 18px;
@@ -66,7 +67,6 @@
                     background: url(/imgs/plus.png) no-repeat right center;
                 }
                 dd{
-                    // display: none;
                     font-size: 12px;
                     font-weight: bold;
                     margin-bottom: 15px;
@@ -106,6 +106,8 @@
                             margin-bottom: -3px;
                             margin-right: 2px;
                             vertical-align: top;
+                        }
+                        .litre{
                             &::before{
                                 display: block;
                                 content: '';
@@ -124,12 +126,48 @@
                                 background: #000;
                             }
                         }
+                        .drop{
+                            display: none;
+                            &::before{
+                                display: block;
+                                content: '';
+                                width: 6px;
+                                height: 9px;
+                                margin: 0 auto;
+                                background: #000;                               
+                            }
+                            &::after{
+                                display: block;
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                border-top: 7px solid #000;
+                                border-left: 8px solid transparent;
+                                border-right: 8px solid transparent;
+                            }
+                        }
                     }
                 }
                 .active{
                     background: #000;
                     color: #fff;
                     border: 1px solid #000;
+                    .litre{
+                        &::before{
+                            border-bottom: 7px solid #fff !important;
+                        }
+                        &::after{
+                            background: #fff !important;
+                        }
+                    }
+                    .drop{
+                        &::before{
+                            background: #fff !important;
+                        }
+                        &::after{
+                            border-top: 7px solid #fff !important;
+                        }
+                    }
                 }
             }
         }
