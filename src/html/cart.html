@@ -25,59 +25,42 @@
                 <a href="/">马上去购物</a>
             </div>
             <div class="haveshop">
-                <h1>您的购物车：<span>2</span>件商品</h1>
+                <h1>您的购物车：<span id="totalNum">2</span>件商品</h1>
                 <div class="shop-cart">
                     <h2>
                         <input type="checkbox" id="allCheck"><b>全选</b>
-                        <i>你已选中<span> 2 </span>件商品</i>
+                        <i>你已选中<span class="checkNum"> 2 </span>件商品</i>
                     </h2>
-                    <ul class="shop-cart-content">
-                        <li class="shop-cart-content-list">
-                            <div class="choose">
-                                <div class="input"><input type="checkbox" class="check"></div>
-                                <div class="option"><div class="edit">编辑</div><div class="remove">删除</div></div>
-                            </div>
-                            <div class="content">
-                                <div class="show">
-                                    <a href="javascript:;"><img src="//image.converse.com.cn/resources/product/10007887102/10007887102_1M_NEW.png?201906041122" alt=""></a>
-                                    <div class="info">
-                                        <h4 class="shopName"><a href="">男的，帅的一笔</a></h4>
-                                        <p>型号：<span>1000554</span></p>
-                                        <p>颜色：<span>白色</span></p>
-                                        <p>尺码：<span>175/100A</span></p>
+                    <ul class="shop-cart-content" id="cart-container">
+                        <script type="text/html" id="cart-template">
+                            {{each data item}}
+                            <li class="shop-cart-content-list" data-id="{{item.id}}">
+                                <div class="choose">
+                                    <div class="input"><input type="checkbox" class="check"></div>
+                                    <div class="option"><div class="editBtn">编辑</div><div class="delBtn">删除</div></div>
+                                </div>
+                                <div class="content">
+                                    <div class="show">
+                                        <a href="javascript:;"><img src="{{item.img[0]}}" alt=""></a>
+                                        <div class="info">
+                                            <h4 class="shopName"><a href="">{{item.title}}</a></h4>
+                                            <p>型号：<span>{{item.type}}</span></p>
+                                            <p>颜色：<span>{{item.color}}</span></p>
+                                            <p>尺码：<span class="shopSize">{{item.size}}</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <h4>￥<span class="shopPrice">{{item.price * item.num}}</span></h4>
+                                        <p><span>数量</span><i class="less"></i><input type="text" class="shopNum" value="{{item.num}}" disabled><i class="more"></i></p>
                                     </div>
                                 </div>
-                                <div class="price">
-                                    <h4>￥<span class="shopPrice">599.00</span></h4>
-                                    <p><span>数量</span><i class="less"></i><input type="text" class="shopNum" disabled><i class="more"></i></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="shop-cart-content-list">
-                            <div class="choose">
-                                <div class="input"><input type="checkbox" class="check"></div>
-                                <div class="option"><div class="edit">编辑</div><div class="remove">删除</div></div>
-                            </div>
-                            <div class="content">
-                                <div class="show">
-                                    <a href="javascript:;"><img src="//image.converse.com.cn/resources/product/10007887102/10007887102_1M_NEW.png?201906041122" alt=""></a>
-                                    <div class="info">
-                                        <h4 class="shopName"><a href="">男的，帅的一笔</a></h4>
-                                        <p>型号：<span>1000554</span></p>
-                                        <p>颜色：<span>白色</span></p>
-                                        <p>尺码：<span>175/100A</span></p>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    <h4>￥<span class="shopPrice">599.00</span></h4>
-                                    <p><span>数量</span><i class="less"></i><input type="text" class="shopNum" disabled><i class="more"></i></p>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                            {{/each}}
+                        </script>
                     </ul>
                     <h2>
-                        <input type="checkbox" id="allCheck"><b>全选</b>
-                        <i>你已选中<span> 2 </span>件商品</i>
+                        <input type="checkbox" id="checkAll"><b>全选</b>
+                        <i>你已选中<span class="checkNum"> 2 </span>件商品</i>
                     </h2>
                 </div>
                 <div class="checkout">
@@ -95,9 +78,9 @@
                     </div>
                     <div class="checkout-right">
                         <div class="checkout-right-info">
-                            <p><i>商品原价：</i><span>¥ 967.00</span></p>
-                            <p><i>店铺活动：</i><span>-¥ 158.00</span></p>
-                            <h4><i>商品金额：</i><span>¥ 809.00</span></h4>
+                            <p><i>商品原价：</i><span id="totalPrice">¥ 967.00</span></p>
+                            <p><i>店铺活动：</i><span>¥ <em id="discount">158.00</em></span></p>
+                            <h4><i>商品金额：</i><span id="shopPrice">¥ 809.00</span></h4>
                             <h5><i>*</i>不含运费及优惠券折扣</h5>
                         </div>
                         <div class="checkout-right-btn">
@@ -108,7 +91,63 @@
             </div>
         </div>
     </main>
+    <div class="modal">
+        <div class="modify">
+            <div class="modify-header">
+                <a href="/html/detail.html">查看详情</a>
+                <span id="remove">X</span>
+            </div>
+            <div class="modify-content">
+                <h3>男的</h3>
+                <h4>199.00</h4>
+                <div class="modify-content-img">
+                    <a href="/html/detail.html"><img src="//image.converse.com.cn/resources/product/10007887102/10007887102_1H_NEW.png?201906041122" alt=""></a>
+                </div>
+                <div class="modify-content-type">
+                    <div class="size">
+                        <div>请输入你的尺码</div>
+                        <div class="choose">
+                            <i></i>
+                            <select id = "size">
+                                <option value>请选择尺码</option>
+                                <option value>34</option>
+                                <option value>35</option>
+                                <option value>36</option>
+                                <option value>37</option>
+                                <option value>38</option>
+                                <option value>39</option>
+                                <option value>40</option>
+                                <option value>41</option>
+                                <option value>42</option>
+                                <option value>43</option>
+                                <option value>44</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="num">
+                        <div>数量</div>
+                        <div class="choose">
+                            <i></i>
+                            <select id = "num">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn" id="update">更新商品</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer"></footer>
-    <script src="/libs/requirejs/require.min.js" data-main="/js/detail"></script>
+    <script src="/libs/requirejs/require.min.js" data-main="/js/cart"></script>
 </body>
 </html>

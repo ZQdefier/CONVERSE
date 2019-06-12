@@ -82,6 +82,7 @@ require(['config'],() => {
                 }else{
                     localStorage.setItem("cart",JSON.stringify([this.data]))
                 }
+                header.cartNum();
 
             }
         }

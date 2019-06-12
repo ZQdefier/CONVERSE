@@ -2,6 +2,9 @@
 @import "module/header.scss";
 @import "module/footer.scss";
 
+.header-nav{
+    display: none;
+}
 .main{
     width: 1000px;
     min-height: 600px;
@@ -25,6 +28,7 @@
             text-align: center;
             p{
                 padding-bottom: 10px;
+                font-size: 14px;
             }
             i{
                 display: inline-block;
@@ -150,6 +154,10 @@
                             justify-content: flex-start;
                             a{
                                 display: block;
+                                img{
+                                    width: 160px;
+                                    height: 160px;
+                                }
                             }
                             .info{
                                 padding-left: 30px;
@@ -310,6 +318,141 @@
                     position: relative;
                     right: -44px;
                     cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba($color: #000000, $alpha: 0.3);
+    .modify{
+        width: 800px;
+        height: 580px;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        &-header{
+            width: 100%;
+            height: 70px; 
+            line-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            a{
+                margin-left: 50px;
+                color: #333;
+            }
+            span{
+                margin-right: 50px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+        &-content{
+            h3,h4{
+                font-size: 24px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+            h4{
+                margin-bottom: 30px;
+            }
+            &>div{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+            }
+            &-img{
+                width: 520px;
+                height: 390px;
+                a{
+                    display: block;
+                    margin: 0 auto;
+                    width: 350px;
+                    height: 350px;
+                    margin: 0 auto;
+                }
+                img{
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+            &-type{
+                display: inline-block;
+                width: 200px;
+                .size,.num{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    min-width: 10px;
+                    line-height: 28px;
+                    font-size: 12px;
+                }
+                .choose{
+                    position: relative;
+                    width: 98px;
+                    height: 28px;
+                    border: 1px solid #b7b7b7;
+                }
+                i{
+                    width: 31px;
+                    height: 28px;
+                    display: block;
+                    background: url(/imgs/detail.png) no-repeat scroll 11px -132px transparent;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 3;
+                    border-left: 1px solid #b7b7b7;
+                }
+                select{
+                    width: 98px;
+                    height: 28px;
+                    position: absolute;
+                    -webkit-appearance: none;
+                    border: none;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                    font-family: "tradegothic";
+                    text-align: center;
+                    font-size: 12px;
+                    option{
+                        text-align: center;
+                        font-weight: normal;
+                        display: block;
+                        white-space: pre;
+                        padding: 0px 2px 1px;
+                    }
+                }
+                .btn{
+                    width: 200px;
+                    height: 50px;
+                    background-color: #940000;
+                    text-align: center;
+                    line-height: 48px;
+                    color: #FFF;
+                    font-family: "Microsoft yahei";
+                    font-size: 16px;
+                    border: 0;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin: 0 auto;
+                    &:hover{
+                        background-color: #bf6766;
+                        -webkit-transition-duration: .3s;
+                    }
                 }
             }
         }
