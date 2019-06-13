@@ -65,6 +65,8 @@ require(['config'],() => {
                 this.shop = $(e.target).parents(".shop-cart-content-list");
                 if(confirm("确认删除么？")){
                     this.shop.remove();
+                    this.n = $(".check:checked").length;
+                    this.recheck();
                     this.change(this.shop,true)
                 }
             }
@@ -103,9 +105,12 @@ require(['config'],() => {
             check(e) {
                 this.n += $(e.target).prop("checked")?1:-1;
                 console.log(this.n);
+                this.total();
+                this.recheck();
+            }
+            recheck() {
                 $("#allCheck").prop("checked",this.n === $(".check").length?true:false);
                 $("#checkAll").prop("checked",$("#allCheck").prop("checked"));
-                this.total();
             }
 
 
@@ -135,7 +140,6 @@ require(['config'],() => {
                     localStorage.setItem('cart',JSON.stringify(cart));
                     console.log(cart);
                     if(cart.length === 0) this.getData();
-                    this.n = $(".check").length;
                 }else{
                     cart[index].num = shop.find(".shopNum").val()*1;
                     cart[index].size = shop.find(".shopSize").html()*1;

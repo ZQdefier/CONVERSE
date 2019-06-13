@@ -42,6 +42,11 @@ require(['config'],() => {
 
             // 加入购物车,存localStorage
             addCart(e) {
+                var id = Number(location.search.slice(8));
+                var size = $("#size option:selected").text() * 1;
+                var num = $("#num option:selected").text() * 1;
+                if(isNaN(size)) return alert("请选择尺码");
+
 
                 // 特效动画
                 $(`<img src='${this.data.img[0]}' style='width:30px;height:30px'>`).fly({
@@ -59,10 +64,7 @@ require(['config'],() => {
                 })
 
 
-                var id = Number(location.search.slice(8));
-                var size = $("#size option:selected").text() * 1;
-                var num = $("#num option:selected").text() * 1;
-                if(isNaN(size)) return alert("请选择尺码");
+                
                 this.data = {...this.data,id,num,size};
                 // console.log(this.data);
                 var cart = localStorage.getItem("cart");

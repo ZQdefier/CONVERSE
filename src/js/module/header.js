@@ -2,13 +2,13 @@ define(['jquery','url','cookie'],($,url) => {
     class Header{
         constructor() {
             this.container = $(".header");
+            this.userBox = false;
+            this.searchBox = false;
+            this.top = 0;
             this.load().then(() => {
                 this.bindevents();
                 this.cartNum();
                 this.isLogin();
-                this.userBox = false;
-                this.searchBox = false;
-                this.top = 0;
             })
         }
 
@@ -34,6 +34,13 @@ define(['jquery','url','cookie'],($,url) => {
             $(".header").on('click',"#searchBtn",() => this.search())
             $(".header").on('click',"#cancel",() => this.cancel())
             $(window).on('scroll',() => this.scroll())
+            $(".header-drop").hover(() => {
+                if(this.userBox||this.searchBox) return false;
+                $(".header-modal").show();
+            },()=> {
+                if(this.userBox||this.searchBox) return false;
+                $(".header-modal").hide();
+                })
         }
         
         // 购物车数量变化功能
@@ -161,6 +168,7 @@ define(['jquery','url','cookie'],($,url) => {
         }
         // 模态框消失
         modal() {
+            console.log(this.searchBox);
             if(this.userBox) this.userSlide();
             if(this.searchBox) this.userSearch();
             $(".header-modal").hide();
